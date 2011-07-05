@@ -1,0 +1,397 @@
+##SimpleLoginForm  ------------------
+#SimpleLoginForm
+package org.androidtitlan.itam.simpleloginform;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class SimpleLoginForm extends Activity {
+	
+	// Declare our Views, so we can access them later
+	private EditText etUsername;
+	private EditText etPassword;
+	private Button btnLogin;
+	private Button btnCancel;
+	private TextView lblResult;
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+     // Get the EditText and Button References
+        etUsername = (EditText)findViewById(R.id.username);
+        etPassword = (EditText)findViewById(R.id.password);
+        btnLogin = (Button)findViewById(R.id.login_button);
+        btnCancel = (Button)findViewById(R.id.cancel_button);
+        lblResult = (TextView)findViewById(R.id.result);
+   
+        // Set Click Listener
+        btnLogin.setOnClickListener(new OnClickListener() {
+//  	@Override
+  	public void onClick(View v) {
+  		// Check Login
+  		String username = etUsername.getText().toString();
+  		String password = etPassword.getText().toString();
+
+  		if(username.equals("ITAM") && password.equals("ITAM")){
+  			lblResult.setText("Login successful.");
+  		} else {
+  			lblResult.setText("Login failed. Username and/or password doesn't match.");
+  		}
+  	}
+  });
+        btnCancel.setOnClickListener(new OnClickListener() {
+//  	@Override
+  	public void onClick(View v) {
+  		// Close the application
+  		finish();
+  	}
+  });
+    }
+}  
+
+##XML 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TableLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:stretchColumns="1"
+	    >
+	    
+	    <TextView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Enter your credentials"
+		/>
+		
+	    <TableRow>
+			<TextView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Password:"
+			/>
+		    <EditText
+				android:id="@+id/username"
+				android:singleLine="true"
+			    android:hint="Use ITAM"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			/>
+		</TableRow>
+		
+		<TableRow>
+		<TextView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Login:"
+		/>
+		<EditText
+			android:id="@+id/password"
+			android:password="true"
+			android:singleLine="true"
+			android:hint="Use ITAM"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		</TableRow>
+		
+		<Button
+			android:id="@+id/login_button"
+			android:text="Login"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		<Button
+			android:id="@+id/cancel_button"
+			android:text="Cancel"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		
+		<TextView
+			android:id="@+id/result"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		
+	    </TableLayout>
+</LinearLayout>
+
+##End XML  
+
+##End SimpleLoginForm-------------------------
+
+
+
+##SimpleIntent        ------------------------
+
+public class GreenFlashLightActivity extends Activity {
+	/**
+	 * @see android.app.Activity#onCreate(Bundle)
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.green);
+		 Button toRedActivity = (Button)findViewById(R.id.toRedActivity);
+	     toRedActivity.setOnClickListener(new View.OnClickListener() {
+		 public void onClick(View v) {
+    		finish();
+				}
+			});
+	}
+}
+      
+public class RedFlashLightActivity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        Button toGreenActivity = (Button)findViewById(R.id.toGreenActivity);
+        toGreenActivity.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent = new Intent(RedFlashLightActivity.this, GreenFlashLightActivity.class);
+				startActivity(intent);
+			}
+		});
+    }
+}
+
+XML
+
+Red        
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@color/red"
+    >
+<TextView  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="@string/red"
+        />
+<Button
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="@string/toGreenActivity"
+	android:id="@+id/toGreenActivity"
+	/>
+</LinearLayout>
+
+Main
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@color/red"
+    >
+<TextView  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="@string/red"
+        />
+<Button
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="@string/toGreenActivity"
+	android:id="@+id/toGreenActivity"
+	/>
+</LinearLayout>
+ 
+
+
+
+                            
+##End SimpleIntent-----------------------
+
+
+##SimpleCall-----------------------------
+
+package org.androidtitlan.motodev.simpledialer;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+public class SimpleDialer extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+    
+    public void dial(View v){
+    		EditText number = (EditText)findViewById(R.id.number);
+    		String toDial = "tel:"+number.getText().toString();
+//    		startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(toDial)));
+    		startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(toDial)));
+    }
+}
+## XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+
+	<LinearLayout 
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" > 
+	<TextView
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="Number to dial:" />
+		
+	<EditText 
+		android:id="@+id/number" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:cursorVisible="true" 
+		android:editable="true" 
+		android:singleLine="true"
+		/>
+	</LinearLayout> 
+	<Button 
+		android:id="@+id/dial"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_weight="1" 
+		android:text="Dial It!" 
+		android:onClick="dial"
+	/> 
+</LinearLayout>
+
+##End XML
+
+##End SimpleCall---------------------   
+
+
+##SimpleService ---------
+
+SimpleService.java
+public class SimpleService extends Activity implements OnClickListener {
+	  Button Start, Stop;
+
+	  @Override
+	  public void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.main);
+
+	    Start = (Button) findViewById(R.id.startbutton);
+	    Stop = (Button) findViewById(R.id.stopbutton);
+
+	    Start.setOnClickListener(this);
+	    Stop.setOnClickListener(this);
+	  }
+
+	  public void onClick(View src) {
+	    switch (src.getId()) {
+	    case R.id.startbutton:
+	    	Toast.makeText(getApplicationContext(), "Clicked: Starting service", Toast.LENGTH_SHORT).show();
+	    	startService(new Intent(this, MyService.class));
+	      break;
+	    case R.id.stopbutton:
+	    	Toast.makeText(getApplicationContext(), "Clicked: Stopping service", Toast.LENGTH_SHORT).show();
+	      stopService(new Intent(this, MyService.class));
+	      break;
+	    }
+	  }
+	}   
+	
+	
+MyService.java      
+
+public class MyService extends Service {
+	private static final String TAG = "MyService";
+	MediaPlayer player;
+	
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+	
+	@Override
+	public void onCreate() {
+		Toast.makeText(this, "My Service Created", Toast.LENGTH_LONG).show();
+		Log.d(TAG, "onCreate");
+		
+		player = MediaPlayer.create(this, R.raw.nyan_cat);
+		player.setLooping(true); // Set looping
+	}
+
+	@Override
+	public void onDestroy() {
+		Toast.makeText(this, "My Service Stopped", Toast.LENGTH_LONG).show();
+		Log.d(TAG, "onDestroy");
+		player.stop();
+	}
+	
+	@Override
+	public void onStart(Intent intent, int startid) {
+		Toast.makeText(this, "My Service Started", Toast.LENGTH_LONG).show();
+		Log.d(TAG, "onStart");
+		player.start();
+	}
+}
+
+XML
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+	<TextView  
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Services Demo" 
+    	android:gravity="center" 
+    	android:textSize="20sp" 
+    	android:padding="20dp"
+    	/>
+	<Button 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/startbutton" 
+		android:text="Start"
+	/>
+	<Button 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text="Stop" 
+		android:id="@+id/stopbutton"/>
+</LinearLayout>
+
+
+
+End SimpleService------------

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TableLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:stretchColumns="1"
+	    >
+	    
+	    <TextView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Enter your credentials"
+		/>
+		
+	    <TableRow>
+	    
+			<TextView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Password:"
+			/>
+		    <EditText
+				android:id="@+id/username"
+				android:singleLine="true"
+			    android:hint="Use ITAM"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			/>
+		</TableRow>
+		
+		<TableRow>
+		<TextView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Login:"
+		/>
+		<EditText
+			android:id="@+id/password"
+			android:password="true"
+			android:singleLine="true"
+			android:hint="Use ITAM"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		</TableRow>
+		
+		<Button
+			android:id="@+id/login_button"
+			android:text="Login"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		<Button
+			android:id="@+id/cancel_button"
+			android:text="Cancel"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+		<TextView
+			android:id="@+id/result"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		/>
+	    </TableLayout>
+</LinearLayout>

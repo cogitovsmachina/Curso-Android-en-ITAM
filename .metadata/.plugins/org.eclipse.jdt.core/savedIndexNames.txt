@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/spy/Desktop/AndroidTitlan/Proyectos/Curso ITAM/.metadata/.plugins/org.eclipse.jdt.core
+996976619.index
+1844409235.index
