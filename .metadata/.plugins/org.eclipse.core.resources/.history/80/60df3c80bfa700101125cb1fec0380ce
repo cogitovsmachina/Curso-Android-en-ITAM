@@ -1,0 +1,13 @@
+package org.androidtitlan.itam.simpledownload;
+
+import android.app.Activity;
+import android.app.IntentService;
+import android.os.Bundle;
+
+public class SimpleDownload extends IntentService {
+    public SimpleDownload(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+}

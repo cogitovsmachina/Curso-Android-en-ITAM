@@ -1,0 +1,39 @@
+package org.androidtitlan.itam.simpleservice;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class SimpleService extends Activity implements OnClickListener {
+     Button Start,Stop;
+
+	/** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        Start = (Button)findViewById(R.id.startbutton);
+        Stop = (Button)findViewById(R.id.stopbutton);
+        
+        Start.setOnClickListener(this);
+        Stop.setOnClickListener(this);
+        
+    }
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.startbutton:
+				Toast.makeText(getApplicationContext(), "Clicked: Starting Service", 500);
+				startService(new Intent(this, MyService.class));
+		case R.id.stopbutton:
+				Toast.makeText(getApplicationContext(), "Clicked: Stopping Service", 500);
+		}
+		
+	}
+}

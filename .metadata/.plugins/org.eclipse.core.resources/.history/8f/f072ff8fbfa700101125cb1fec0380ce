@@ -1,0 +1,14 @@
+package org.androidtitlan.itam.simpledownload;
+
+import android.app.Activity;
+import android.app.IntentService;
+import android.os.Bundle;
+
+public class SimpleDownload extends IntentService {
+	public static final String EXTRA_MESSENGER="org.androidtitlan.itam.android.downloader.EXTRA_MESSENGER"
+    public SimpleDownload(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+}
