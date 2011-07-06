@@ -8,49 +8,56 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+
 public class SimpleLoginForm extends Activity {
 	
-	// Declare our Views, so we can access them later
-	private EditText etUsername;
-	private EditText etPassword;
-	private Button btnLogin;
-	private Button btnCancel;
-	private TextView lblResult;
-
+	private EditText etUser;
+	private EditText etPwd;
+	private Button Loginbtn;
+	private Button Cancelbtn;
+	private TextView result;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
-     // Get the EditText and Button References
-        etUsername = (EditText)findViewById(R.id.username);
-        etPassword = (EditText)findViewById(R.id.password);
-        btnLogin = (Button)findViewById(R.id.login_button);
-        btnCancel = (Button)findViewById(R.id.cancel_button);
-        lblResult = (TextView)findViewById(R.id.result);
-   
-        // Set Click Listener
-        btnLogin.setOnClickListener(new OnClickListener() {
-//  	@Override
-  	public void onClick(View v) {
-  		// Check Login
-  		String username = etUsername.getText().toString();
-  		String password = etPassword.getText().toString();
+         
+        etUser = (EditText)findViewById(R.id.username);
+        etPwd= (EditText)findViewById(R.id.password);
+        Loginbtn= (Button)findViewById(R.id.loginbutton);
+        Cancelbtn=(Button)findViewById(R.id.cancelbutton);
+        result=(TextView)findViewById(R.id.result);
+    	
+       Loginbtn.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			String username = etUser.getText().toString();
+			String password = etPwd.getText().toString();
+			
+			if(username.equalsIgnoreCase("iTam") && password.equalsIgnoreCase("ItAm")){
+				result.setText("Yay, we entered!");
+			}
+			else{
+				result.setText("Login Failed. :(");
+			}
+			
+			
+			
+			
+		}
+	});
+       
+       Cancelbtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 
-  		if(username.equals("ITAM") && password.equals("ITAM")){
-  			lblResult.setText("Login successful.");
-  		} else {
-  			lblResult.setText("Login failed. Username and/or password doesn't match.");
-  		}
-  	}
-  });
-        btnCancel.setOnClickListener(new OnClickListener() {
-//  	@Override
-  	public void onClick(View v) {
-  		// Close the application
-  		finish();
-  	}
-  });
+        
     }
 }

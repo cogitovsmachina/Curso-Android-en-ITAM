@@ -1,0 +1,14 @@
+package org.androidtitlan.itam.simpleintent;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class First extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	}
+	
+}

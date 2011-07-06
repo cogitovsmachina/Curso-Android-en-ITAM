@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="11" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="69" y="22">
+<window height="774" width="1280" x="0" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="54" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -26,7 +26,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1309772141416" focus="true" label="Workspace - DDMS">
+<page aggregateWorkingSetId="Aggregate for window 1309772141416" focus="true" label="Workspace - Java">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -38,12 +38,12 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HolaAndroid.java" partName="HolaAndroid.java" path="/Users/spy/Desktop/AndroidTitlan/Proyectos/Curso ITAM/HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java" title="HolaAndroid.java" tooltip="HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="353" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleLoginForm.java" partName="SimpleLoginForm.java" path="/Users/spy/Desktop/AndroidTitlan/Proyectos/Curso ITAM/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java" title="SimpleLoginForm.java" tooltip="SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1191" selectionTopPixel="387"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="/Users/spy/Desktop/AndroidTitlan/Proyectos/Curso ITAM/HolaAndroid/res/layout/main.xml" title="main.xml" tooltip="HolaAndroid/res/layout/main.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HolaAndroid/res/layout/main.xml"/>
+<editor activePart="true" focus="true" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="/Users/spy/Desktop/AndroidTitlan/Proyectos/Curso ITAM/SimpleLoginForm/res/layout/main.xml" title="main.xml" tooltip="SimpleLoginForm/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleLoginForm/res/layout/main.xml"/>
 </editor>
 </editors>
 <views>
@@ -64,15 +64,18 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
+<category IMemento.internal.id="Warnings (5 items)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="84" org.eclipse.ui.ide.markerType="114" org.eclipse.ui.ide.pathField="144" org.eclipse.ui.ide.resourceField="114" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1309772141416">
@@ -103,9 +106,6 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="com.android.ide.eclipse.ddms.views.EmulatorControlView" partName="Emulator Control">
 <viewState/>
 </view>
@@ -113,7 +113,7 @@
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 </views>
-<perspectives activePart="com.android.ide.eclipse.ddms.views.DeviceView" activePerspective="com.android.ide.eclipse.ddms.Perspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -333,6 +333,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/HolaAndroid/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/HolaAndroid/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/SimpleLoginForm/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.resources.ResourcesEditor" path="/SimpleLoginForm/res/values/strings.xml"/>
 </editors>
 <item historyLabel="main.xml" index="0"/>
 <item historyLabel="SimpleLoginForm.java" index="1">
@@ -376,9 +380,80 @@
 <item historyLabel="HolaAndroid.java" index="2">
 <position info="not_deleted" x="312" y="4"/>
 </item>
-<item active="true" historyLabel="HolaAndroid.java" index="2">
+<item historyLabel="HolaAndroid.java" index="2">
 <position info="not_deleted" x="353" y="0"/>
 </item>
+<item historyLabel="main.xml" index="4"/>
+<item historyLabel="HolaAndroid.java" index="2">
+<position info="not_deleted" x="353" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="692" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="746" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="801" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="859" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="917" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="strings.xml" index="7"/>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="936" y="6"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="936" y="6"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1505" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="990" y="15"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1505" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1236" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1278" y="0"/>
+</item>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1341" y="0"/>
+</item>
+<item historyLabel="main.xml" index="6"/>
+<item historyLabel="SimpleLoginForm.java" index="5">
+<position info="not_deleted" x="1191" y="0"/>
+</item>
+<item active="true" historyLabel="main.xml" index="6"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -403,17 +478,20 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" tooltip="SimpleLoginForm/res/values/strings.xml">
+<persistable path="/SimpleLoginForm/res/values/strings.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="SimpleLoginForm/res/layout/main.xml">
+<persistable path="/SimpleLoginForm/res/layout/main.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleLoginForm.java" tooltip="SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java">
+<persistable path="/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="HolaAndroid/res/layout/main.xml">
 <persistable path="/HolaAndroid/res/layout/main.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HolaAndroid.java" tooltip="HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java">
 <persistable path="/HolaAndroid/src/org/androidtitlan/itam/holaandroid/HolaAndroid.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleLoginForm.java" tooltip="SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java">
-<persistable path="/SimpleLoginForm/src/org/androidtitlan/itam/simpleloginform/SimpleLoginForm.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" tooltip="SimpleLoginForm/res/layout/main.xml">
-<persistable path="/SimpleLoginForm/res/layout/main.xml"/>
 </file>
 </mruList>
 </workbench>

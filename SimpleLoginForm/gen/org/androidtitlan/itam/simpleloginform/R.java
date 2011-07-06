@@ -14,8 +14,8 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int cancel_button=0x7f050003;
-        public static final int login_button=0x7f050002;
+        public static final int cancelbutton=0x7f050003;
+        public static final int loginbutton=0x7f050002;
         public static final int password=0x7f050001;
         public static final int result=0x7f050004;
         public static final int username=0x7f050000;
