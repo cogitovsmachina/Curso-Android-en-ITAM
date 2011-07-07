@@ -11,7 +11,7 @@ import org.apache.http.util.EntityUtils;
 public class ByteArrayResponseHandler implements ResponseHandler<byte[]> {
 	public byte[] handleResponse(final HttpResponse response)
 									throws IOException, HttpResponseException {
-		StatusLine statusLine=response.getStatusLine();
+		StatusLine statusLine = response.getStatusLine();
 		
 		if (statusLine.getStatusCode()>=300) {
 			throw new HttpResponseException(statusLine.getStatusCode(),

@@ -1,0 +1,7 @@
+2011-07-07 05:42:06,529 TRACE [pool-1-thread-1] c.m.a.AndroDemon [AndroDemon.java:124] initBridge
+2011-07-07 05:42:06,565 TRACE [pool-1-thread-1] c.m.a.AndroDemon [AndroDemon.java:126] create bridge
+2011-07-07 05:42:06,882 TRACE [pool-1-thread-1] c.m.a.AndroDemon [AndroDemon.java:129] bridge is created
+2011-07-07 05:42:06,902 INFO [Device List Monitor] c.m.a.AndroDemon [AndroDemon.java:135] deviceConnected: 0403889903011014
+2011-07-07 05:42:06,993 TRACE [Device List Monitor] c.m.a.AndroDemon [AndroDemon.java:147] deviceChanged: 0403889903011014 - 4
+2011-07-07 05:42:14,156 DEBUG [AWT-EventQueue-0] c.m.a.Mediator [Mediator.java:171] Full screen: true
+2011-07-07 05:42:33,302 DEBUG [AWT-EventQueue-0] c.m.a.Mediator [Mediator.java:171] Full screen: false

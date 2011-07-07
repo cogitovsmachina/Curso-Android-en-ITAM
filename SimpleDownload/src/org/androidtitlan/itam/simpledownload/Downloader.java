@@ -18,7 +18,7 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 public class Downloader extends IntentService {
-public static final String EXTRA_MESSENGER="com.commonsware.android.downloader.EXTRA_MESSENGER";
+public static final String EXTRA_MESSENGER="org.androidtitlan.itam.simpledownload.EXTRA_MESSENGER";
 private HttpClient client=null;
 
 public Downloader() {
